@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LightSignal</string>
+    <string name="red">RED</string>
+    <string name="yellow">YELLOW</string>
+    <string name="green">GREEN</string>
+    <string name="about_text">
+        У лукоморья дуб зеленый;\n
+        Златая цепь на дубе том:\n
+        И дней и ночью <b>кот ученый</b>\n
+        Всё ходит по цепи кругом;\n
+        Идет <b>направо</b>> - песнь заводит,\n
+        <b>Налево</b> - сказку говорит.\n
+    </string>
+    <string name="about_title">About</string>
+    <string name="title_activity_birthday">BirthdayActivity</string>
+</resources>
