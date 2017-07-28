@@ -18,11 +18,12 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/about_title"></activity>
+            android:label="@string/about_title" />
         <activity
             android:name=".BirthdayActivity"
             android:label="@string/title_activity_birthday"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SherlockActivity"></activity>
     </application>
 
 </manifest>

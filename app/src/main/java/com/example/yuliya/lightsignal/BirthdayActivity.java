@@ -18,8 +18,10 @@ public class BirthdayActivity extends AppCompatActivity {
         String receiver = "ЖЫвотное";
         String description = "дырку от бублика";
 
-        receiver = getIntent().getExtras().getString("Receiver");
-        description = getIntent().getExtras().getString("Description");
+        //receiver = getIntent().getExtras().getString("Receiver");
+        //description = getIntent().getExtras().getString("Description");
+        receiver = getIntent().getStringExtra("Receiver");
+        description = getIntent().getStringExtra("Description");
 
         TextView infoTextView = (TextView)findViewById(R.id.textView);
         infoTextView.setText(receiver + " , you get " + description);

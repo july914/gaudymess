@@ -81,8 +81,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         EditText receiverEditText = (EditText) findViewById(R.id.editTextReceiver);
         EditText descriptionEditText = (EditText) findViewById(R.id.editTextDescription);
 
-        Intent intent = new Intent(MainActivity.this, BirthdayActivity.class);
 
+        Intent intent = new Intent(MainActivity.this, BirthdayActivity.class);
 
         intent.putExtra("Receiver", receiverEditText.getText().toString());
         intent.putExtra("Description", descriptionEditText.getText().toString());
