@@ -88,4 +88,25 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         intent.putExtra("Description", descriptionEditText.getText().toString());
         startActivity(intent);
     }
+
+    static final private int CHOOSE_THIEF=0;
+    public void onChooseButtonClick(View view) {
+        Intent questionIntent = new Intent(MainActivity.this, SherlockActivity.class);
+        startActivityForResult(questionIntent, CHOOSE_THIEF);
+    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode, resultCode, data);
+
+        TextView ThiefTextView = (TextView) findViewById(R.id.textViewInfo);
+
+        if (requestCode == CHOOSE_THIEF){
+            if (resultCode == RESULT_OK){
+                String thiefname = data.getStringExtra(SherlockActivity.THIEF);
+                ThiefTextView.setText(thiefname);
+            }else {
+                ThiefTextView.setText("");
+            }
+        }
+    }
 }
