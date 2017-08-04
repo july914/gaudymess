@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
         super.onActivityResult(requestCode, resultCode, data);
 
-        TextView ThiefTextView = (TextView) findViewById(R.id.textViewInfo);
+        TextView ThiefTextView = (TextView) findViewById(R.id.textViewThief);
 
         if (requestCode == CHOOSE_THIEF){
             if (resultCode == RESULT_OK){
