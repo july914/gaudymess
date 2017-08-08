@@ -23,7 +23,15 @@
             android:name=".BirthdayActivity"
             android:label="@string/title_activity_birthday"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SherlockActivity"></activity>
+        <activity
+            android:name=".SherlockActivity"
+            android:label="Sherlock" >
+            <intent-filter >
+                <action android:name="com.example.yuliya.lightsignal.SherlockActivity" />
+            <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

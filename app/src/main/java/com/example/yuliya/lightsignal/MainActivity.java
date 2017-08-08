@@ -5,6 +5,8 @@ import android.support.constraint.ConstraintLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +49,31 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
         mInfoTextView = (TextView) findViewById(R.id.textViewInfo);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        TextView SettingsTextView = (TextView) findViewById(R.id.textView3);
+        switch (id){
+            case R.id.action_cat1:
+                SettingsTextView.setText("Cat was chosen");
+                return true;
+            case R.id.action_cat2:
+                SettingsTextView.setText("Kitten was chosen");
+                return true;
+            case R.id.actionAbout:
+                Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
     @Override
     public void onClick(View v) {
@@ -71,11 +98,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
     }
 
 
-    public void onAboutButtonClick(View view) {
 
-        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(intent);
-    }
 
     public void onNextButtonClick(View view) {
         EditText receiverEditText = (EditText) findViewById(R.id.editTextReceiver);
@@ -108,5 +131,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener{
                 ThiefTextView.setText("");
             }
         }
+    }
+
+    public void onSettingsMenuClick(MenuItem item) {
+        TextView SettingsTextView = (TextView) findViewById(R.id.textView3);
+        SettingsTextView.setText("Settings was chosen, it's better to choose a cat");
     }
 }
